@@ -23,7 +23,7 @@ mongoose.connect(`${process.env.START_MONGODB}${process.env.MONGODB_USERNAME}:${
 app.use(express.json());
 app.use(cors(
   {
-    origin: 'https://compassionate-goldwasser-94a9e6.netlify.app',
+    origin: 'https://number-registrar.netlify.app/',
     credentials: true
   }
 ));
@@ -98,7 +98,7 @@ app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('https://compassionate-goldwasser-94a9e6.netlify.app');
+    res.redirect('https://number-registrar.netlify.app/');
 });
 
 app.get('/api/users', (req: any, res: any) => {
