@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "yarn install",
     "dev": "nodemon --exec ts-node src/index.ts",
     "start": "node build/dist/index.js",
     "build": "tsc -p ."
@@ -21,7 +22,8 @@
     "mongoose": "^5.12.1",
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "tsc": "^1.20150623.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
